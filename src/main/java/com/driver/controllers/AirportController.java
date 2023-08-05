@@ -24,7 +24,8 @@ public class AirportController {
 
     @PostMapping("/add_airport")
     public String addAirport(@RequestBody Airport airport){
-        airportService.addAirport(airport);
+        String a= airportService.addAirport(airport);
+
 
         //Simply add airport details to your database
         //Return a String message "SUCCESS"
