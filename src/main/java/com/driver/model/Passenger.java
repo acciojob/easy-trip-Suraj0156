@@ -2,16 +2,12 @@ package com.driver.model;
 
 public class Passenger {
 
-    private int passengerId; //This is a unique key for Passenger model :
-
+    private int passengerId; // This is a unique key for Passenger model:
     private String email;
-
     private String name;
-
     private int age;
 
     public Passenger() {
-
     }
 
     public Passenger(int passengerId, String email, String name, int age) {
