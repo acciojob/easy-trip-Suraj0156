@@ -1,26 +1,40 @@
 package com.driver.services;
 
 import com.driver.model.Airport;
+import com.driver.model.City;
+import com.driver.model.Flight;
+import com.driver.model.Passenger;
 import com.driver.repoosetries.AirportRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
+
+
 @Service
-public class AirportService {
+public interface AirportService {
 
-    @Autowired
+    String addAirport(Airport airport);
 
+    Airport getLargestAirport();
 
-    private AirportRepository airportRepository;
+    double getShortestDurationOfPossibleBetweenTwoCities(City fromCity, City toCity);
 
+    int getNumberOfPeopleOn(Date date, String airportName);
 
-    public String addAirport(Airport airport) {
-        return airportRepository.addAirport(airport);
-    }
+    int calculateFlightFare(Integer flightId);
 
-    public Airport getLargestAirport() {
-        return airportRepository.getLargestAirport();
-    }
+    String bookATicket(Integer flightId, Integer passengerId);
 
-    // Other methods related to AirportService...
+    String cancelATicket(Integer flightId, Integer passengerId);
+
+    int countOfBookingsDoneByPassengerAllCombined(Integer passengerId);
+
+    String addFlight(Flight flight);
+
+    String getAirportNameFromFlightId(Integer flightId);
+
+    int calculateRevenueOfAFlight(Integer flightId);
+
+    String addPassenger(Passenger passenger);
 }
