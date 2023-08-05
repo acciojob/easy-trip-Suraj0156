@@ -1,5 +1,8 @@
-package com.driver.model;
+package com.driver.controllers;
 
+import com.driver.model.City;
+import com.driver.model.Flight;
+import com.driver.services.FlightService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

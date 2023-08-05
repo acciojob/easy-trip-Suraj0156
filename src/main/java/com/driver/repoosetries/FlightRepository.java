@@ -1,4 +1,6 @@
-package com.driver.model;
+package com.driver.repoosetries;
+
+import com.driver.model.Flight;
 
 import java.util.HashMap;
 import java.util.Map;

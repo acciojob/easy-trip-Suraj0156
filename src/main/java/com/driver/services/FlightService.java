@@ -1,4 +1,8 @@
-package com.driver.model;
+package com.driver.services;
+
+import com.driver.model.City;
+import com.driver.model.Flight;
+import com.driver.repoosetries.FlightRepository;
 
 public class FlightService {private final FlightRepository flightRepository;
 

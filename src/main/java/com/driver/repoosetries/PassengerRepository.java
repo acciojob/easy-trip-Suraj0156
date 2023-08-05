@@ -1,8 +1,11 @@
-package com.driver.model;
+package com.driver.repoosetries;
+
+import com.driver.model.Passenger;
+import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
 import java.util.Map;
-
+@Repository
 public class PassengerRepository {
 
     private Map<Integer, Passenger> passengers = new HashMap<>();
